@@ -25,7 +25,8 @@ This will download all the dependencies for our app and set up the database.
 ### Index Route
 
 - Create a route for making a `GET` request to `/students`
-- Generate a `StudentsController` with an `index` action for handling the route
+- Generate a `StudentsController` with an `index` action for handling the route;
+  don't forget to pass the `--no test framework` argument!
 - In the `index` action, return JSON data representing a list of all the
   students
 
@@ -37,6 +38,8 @@ This will download all the dependencies for our app and set up the database.
   ordered by grade from highest to lowest
 
 ### Bonus: Highest Grade Route
+
+**Un-comment out the last test in `/spec/requests/students_spec.rb` to complete the bonus.**
 
 - Create a route for making a `GET` request to `/students/highest-grade`
 - Add a `highest_grade` action in the `StudentsController for handling that
