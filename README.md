@@ -33,7 +33,7 @@ This will download all the dependencies for our app and set up the database.
 ### Grades Route
 
 - Create a route for making a `GET` request to `/students/grades`
-- Add a `grades` action in the `StudentsController for handling that route
+- Add a `grades` action in the `StudentsController` for handling that route
 - In the `grades` action, return JSON data representing a list of all students,
   ordered by grade from highest to lowest
 
