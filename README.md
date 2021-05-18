@@ -42,7 +42,7 @@ This will download all the dependencies for our app and set up the database.
 **Un-comment out the last test in `/spec/requests/students_spec.rb` to complete the bonus.**
 
 - Create a route for making a `GET` request to `/students/highest-grade`
-- Add a `highest_grade` action in the `StudentsController for handling that
+- Add a `highest_grade` action in the `StudentsController` for handling that
   route
 - In the `highest_grade` action, return JSON data representing the one student
   with the highest grade
