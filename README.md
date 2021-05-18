@@ -27,7 +27,7 @@ This will download all the dependencies for our app and set up the database.
 - Create a route for making a `GET` request to `/students`
 - Generate a `StudentsController` with an `index` action for handling the route;
   don't forget to pass the `--no test framework` argument!
-- In the `index` action, return JSON data representing a list of all the
+- In the `index` action, return JSON data representing a list of all
   students
 
 ### Grades Route
