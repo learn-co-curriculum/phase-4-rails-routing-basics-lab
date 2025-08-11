@@ -1,12 +1,17 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-
+# Ruby 3.3+ compatibility: Add future stdlib gems
+gem 'bigdecimal', '~> 3.1'
+gem 'fiddle', '~> 1.1'
+gem 'logger', '~> 1.4'
+gem 'mutex_m', '~> 0.1'
+gem 'ostruct', '~> 0.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use sqlite3 as the database for Active Record - updated for Ruby 3.3 compatibility
+gem 'sqlite3', '~> 1.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password
@@ -17,15 +22,17 @@ gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   gem 'listen', '~> 3.3'
+  # Add rubocop for code quality
+  gem 'rubocop', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
